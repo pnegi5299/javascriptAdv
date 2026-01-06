@@ -1,0 +1,57 @@
+    body {
+        background: black;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #addBtn {
+        height: 50px;
+        border: 1px solid black;
+        background: yellow;
+        color: black;
+        align-items: center;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+
+    #addBtn:hover {
+        color: red;
+    }
+
+    #getBtn {
+        height: 50px;
+        border: 1px solid black;
+        background: green;
+        color: black;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    #getBtn:hover {
+        color: yellow;
+    }
+
+    #removeBtn {
+        height: 50px;
+        border: 1px solid black;
+        background: red;
+        color: black;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    #removeBtn:hover {
+        color: green;
+    }
+
+    .local {
+        display: flex;
+        padding: 30%;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }

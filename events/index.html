@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="local">
+        <button id="addBtn">Add Data to localStorage</button>
+        <button id="getBtn">Get Data from localStorage</button>
+        <button id="removeBtn">Delete Data from localStorage</button>
+    </div>
+    <script>
+        const studentBioData = {
+            firstName: "Priyanshu",
+            lastName: "Negi",
+            age:22,
+            gender: "Male",
+            grade: "A",
+            course:["Math","Science","English"],
+            address:{
+                street: "123 Main St",
+                city: "Cityville",
+                state:"State",
+                zipCode:"12345"
+            }
+        };
+
+        const addTodoList=()=>{
+            localStorage.setItem('objectdata', JSON.stringify(studentBioData))
+        }
+
+        const getTodoList=()=>{
+            const retrievedSDtudentData =localStorage.getItem('objectdata')
+            console.log(JSON.parse(retrievedSDtudentData))
+            console.log(studentBioData.firstName)
+        }
+        const removeTodoList=()=>{
+            localStorage.removeItem('objectdata')
+        }
+
+        document.getElementById("addBtn").addEventListener('click', addTodoList);
+         document.getElementById("getBtn").addEventListener('click',getTodoList);
+         document.getElementById("removeBtn").addEventListener('click',()=>{
+            removeTodoList();
+        });
+    </script>
+</body>
+</html>

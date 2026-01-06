@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Color Example</title>
+  <style>
+    body {
+        background-color: black;
+    }
+    .rectangle {
+        background-color: white;
+      border: 2px solid chocolate
+                        ;
+      border-color: aqua;
+      height: 200px;
+      width: 200px;
+      transition: background-color 0.3s ease;
+    }
+    .addTransition{
+        border-radius: 50%;
+        translate: 30rem 0;
+        transition: 1s ease;        
+        
+       
+    }
+
+        .addTransition1{
+        border-radius: 50%;
+        translate: 0rem 0;
+         transition: 1s ease; 
+        
+        
+       
+    }
+  </style>
+</head>
+<body>
+    <section>
+        <div class="rectangle" style="border: 2px solid; height: 200px; width: 200px;"></div>
+        <button id="myButton">Click me</button>
+    </section>
+
+    <script>
+        
+    const myButton = document.getElementById("myButton");
+    const rectDiv = document.querySelector(".rectangle");
+
+    handleMouseEvents=()=> {
+      rectDiv.style.backgroundColor = "#f5ee62";
+      console.log("Click!");
+    }
+
+    const handleMouseEvents2 = ()=>{
+        rectDiv.classList.add("addTransition")
+    }
+
+      const handleMouseEvents3 = ()=>{
+        rectDiv.classList.add("addTransition1")
+    }
+
+    myButton.addEventListener("click", handleMouseEvents );
+    myButton.addEventListener('dblclick', handleMouseEvents2);
+    rectDiv.addEventListener('mouseout',handleMouseEvents3);
+            
+        
+    </script>
+</body>
+</html>

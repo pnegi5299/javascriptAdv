@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+
+        }
+
+        #myInput {
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        .output {
+            background-color: rgb(39, 29, 29);
+            width: 200px;
+            height: 130px;
+            border-left: white
+        }
+
+        p {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="myInput" placeholder="Type Something..."/>
+        <div class="output">
+            <p class="keyPressed">Key pressed:</p>
+            <p class="keyCode">Key code:</p>
+            <p class="charCode">Char codeAt:</p>
+            <p class="eventType">Event type</p>
+        </div>
+    </div>
+
+    <script>
+        const handleKeyPress = (event) => {
+          console.log(event);
+          console.log('Key pressed:', event.key);
+          console.log('Key code:', event.code);
+          console.log('Event type:', event.type);
+
+          document.querySelector(".keyPressed").textContent= `key Pressed : ${event.key}`;
+           document.querySelector(".keyCode").textContent= `key code : ${event.code}`;
+           document.querySelector(".charCode").textContent= `Char codeAt : ${event.key.charCodeAt(0)}`;
+           document.querySelector(".eventType").textContent= `Event Type : ${event.type}`;
+        };
+
+        
+        
+        var output = document.querySelector(".output")
+      
+        myInput.addEventListener('keydown', handleKeyPress);//keydown when key released      
+              
+    </script>
+</body>
+
+</html>

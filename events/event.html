@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Inline Event</h1>
+    <button onclick="alert('Welcome')">greeting</button>
+     <button ondblclick="alert('Welcome Priyanshu')">greeting again</button>   
+     <button onmouseover="alert( 'over done')">mouse over</button> 
+    
+
+     <h1>DoM Event Handler</h1>
+     <button id="myBtn">greeting</button>
+     <button id="myBtn1">greeting again</button>
+     <div class="todol"></div>
+
+     <h1>addEventListener Event Handler</h1>
+     <button id="myBtn2">greeting</button>
+      <button id="myBtn3">greeting again</button>
+      
+       <button id="myBtn4">greeting Over</button>
+     <script>
+     
+        document.getElementById('myBtn').onclick=()=>{
+            alert('welcome') ;
+        }
+        document.getElementById('myBtn1').ondblclick=()=>{
+            alert('Hello tO the world!');}
+
+        document.getElementById('myBtn2').addEventListener('click',()=> {alert("To the world best")});
+        document.getElementById('myBtn3').addEventListener('dblclick',()=> {alert("To the world best js")});
+        document.getElementById('myBtn4').addEventListener('mouseover',()=> {alert("Over Done!")});
+        
+         
+    
+     </script>
+</body>
+</html>
